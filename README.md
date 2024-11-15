@@ -1,4 +1,4 @@
-# AI Object Detection using YOLOv5 and OpenCV
+# AI Object Detection using YOLOv5 and OpenCV With Camera of MacOS
 
 This project demonstrates real-time object detection using Python 3, the OpenCV library, and the YOLOv5 model.
 
