@@ -32,8 +32,8 @@ Ensure you have the following installed:
 ### Installation
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   https://github.com/tuanlong1106/AI-object-dection.git
+   cd AI-object-dection
    ```
 2. Install the required dependencies:
    ```bash
