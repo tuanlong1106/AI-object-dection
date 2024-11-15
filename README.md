@@ -1,71 +1,63 @@
-# AI Object Detection using YOLOv5, OpenCV, and Python
+# AI Object Detection using YOLOv5 and OpenCV
 
-This project demonstrates my journey in building an AI-powered object detection system using Python 3, the OpenCV library, and the YOLOv5 model. The goal is to detect and classify objects in real-time using a live camera feed.
+This project demonstrates real-time object detection using Python 3, the OpenCV library, and the YOLOv5 model.
 
-## Features
-- **Real-time Object Detection**: Utilizes a live camera feed to detect and classify objects.
-- **YOLOv5 Integration**: Leverages the YOLOv5 model for fast and accurate object detection.
-- **Customizable Model**: Supports fine-tuning and loading custom-trained YOLOv5 models.
-- **OpenCV for Video Processing**: Uses OpenCV for capturing video and displaying annotated frames.
-
-## Technologies Used
-- **Python 3**: The programming language used for this project.
-- **YOLOv5**: A state-of-the-art object detection model.
-- **OpenCV**: A powerful library for computer vision tasks.
-
-## How It Works
-1. The YOLOv5 model is loaded using PyTorch.
-2. A live video feed is captured using OpenCV.
-3. Each frame from the video feed is passed through the YOLOv5 model for object detection.
-4. Detected objects are highlighted with bounding boxes and labeled with their class names and confidence scores.
-5. The processed video feed is displayed in a window.
-6. Press `q` to exit the application.
+## Requirements
+- Python 3.8 or later
+- Virtual environment (recommended)
 
 ## Setup Instructions
 
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.8 or later
-- pip (Python package installer)
-- A webcam or other video input device
+### Step 1: Clone the Repository
+Clone the repository to your local machine:
+```bash
+git clone https://github.com/tuanlong1106/AI-object-dection.git
+cd AI-object-dection
+```
 
-### Installation
-1. Clone this repository:
-   ```bash
-   https://github.com/tuanlong1106/AI-object-dection.git
-   cd AI-object-dection
-   ```
-2. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Step 2: Create a Virtual Environment
+Create and activate a virtual environment to isolate dependencies:
+- **On macOS/Linux**:
+  ```bash
+  python3 -m venv env
+  source env/bin/activate
+  ```
+- **On Windows**:
+  ```bash
+  python -m venv env
+  .\env\Scripts\activate
+  ```
 
-3. Download the YOLOv5 model weights:
-   - Place the `yolov5s.pt` file in the project directory.
+### Step 3: Install Dependencies
+Install the required Python libraries:
+```bash
+pip install -r requirements.txt
+```
 
-### Running the Project
-To run the object detection script:
+### Step 4: Download YOLOv5 Model Weights
+Download the YOLOv5 weights file (`yolov5s.pt`) from the [YOLOv5 repository](https://github.com/ultralytics/yolov5) and place it in the project directory.
+
+### Step 5: Run the Application
+To start object detection, execute the following command:
 ```bash
 python app.py
 ```
 
-## File Structure
-- `app.py`: Main script for running object detection.
-- `requirements.txt`: Contains the list of required Python libraries.
-- `yolov5s.pt`: Pre-trained YOLOv5 model weights (not included in the repository).
+The application will use your webcam to perform real-time object detection. Detected objects will be highlighted with bounding boxes and labels.
 
-## Sample Output
-The program will display a video feed with objects highlighted by bounding boxes and labeled with their class names and confidence scores. Example objects include people, cars, and various common items.
+### Notes
+- Ensure your camera is connected and accessible.
+- The script is configured for macOS. For Windows or Linux, modify the camera initialization in `app.py` if needed.
+- Press `q` to exit the application.
+
+## File Structure
+- `app.py`: Main script for object detection.
+- `requirements.txt`: List of required Python libraries.
+- `README.md`: Documentation for setup and usage.
 
 ## Future Improvements
-- Add support for custom datasets and training.
-- Optimize performance for deployment on edge devices like Raspberry Pi.
-- Integrate with other libraries for additional functionality (e.g., saving detected frames).
+- Support for custom-trained YOLOv5 models.
+- Optimization for deployment on edge devices.
+- Cross-platform compatibility improvements.
 
-## Acknowledgments
-- [YOLOv5 by Ultralytics](https://github.com/ultralytics/yolov5)
-- [OpenCV](https://opencv.org/)
-
----
-
-Feel free to contribute or reach out with any questions or suggestions!
+Feel free to reach out with any questions or suggestions!
